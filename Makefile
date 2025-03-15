@@ -1,4 +1,6 @@
-FILES=./src/main.c ./src/commands/dump_file.c ./src/commands/help.c
+
+BASE_DIR_COMMAND=./src/commands/
+FILES=./src/main.c ${BASE_DIR_COMMAND}dump_file.c ${BASE_DIR_COMMAND}help.c ${BASE_DIR_COMMAND}copy_file_data.c
 PATH_TO_COMPIL=./bin/miraclecancodecat
 PATH_TO_LIB=./src/lib
 
