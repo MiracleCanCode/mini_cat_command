@@ -19,6 +19,4 @@ void dump_file(char *path_file)
     }
 
     fclose(file);
-
-
 }
