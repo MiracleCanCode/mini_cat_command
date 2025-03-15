@@ -1,6 +1,8 @@
 #include "commands.h"
 #include <stdio.h>
 
+const int MAX_BUFFER_SIZE = 1024;
+
 void dump_file(char *path_file)
 {
     FILE *file = fopen(path_file, "r");
@@ -11,8 +13,8 @@ void dump_file(char *path_file)
         return;
     }
 
-    char buffer[256];
-    while(fgets(buffer, 256, file) != NULL) 
+    char buffer[MAX_BUFFER_SIZE];
+    while(fgets(buffer, sizeof(buffer), file) != NULL) 
     {
         fputs(buffer, file);
         printf("%s", buffer);
