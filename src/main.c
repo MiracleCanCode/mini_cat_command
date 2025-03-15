@@ -12,9 +12,10 @@ int main(int argc, char *argv[])
         {
             help();
         }
-        if(strcmp(argv[i], "-r") == 0 || strcmp(argv[i], "-R") == 0)
+        if((strcmp(argv[i], "-r") == 0 || strcmp(argv[i], "-R") == 0) && i+1 < argc)
         {
-            dump_file("");
+            char *path_file = argv[i+1];
+            dump_file(path_file);
         }
     }
     return 0;
