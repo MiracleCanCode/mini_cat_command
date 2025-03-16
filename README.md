@@ -1,4 +1,4 @@
-# miraclecancode cat command
+# isacat cat command
 
 ### This repository is just an attempt to create a copy of the cat command in C
 #### Usage:
@@ -9,7 +9,7 @@ make build
 
 Run app:
 ```sh
-./bin/miraclecancodecat --help
+./bin/isacat --help
 ```
 
 ### Overview of Basic Commands:

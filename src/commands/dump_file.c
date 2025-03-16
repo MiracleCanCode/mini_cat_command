@@ -9,7 +9,7 @@ void dump_file(char *path_file)
 
     if(!file) 
     {
-        printf("miraclecancodecat: %s: Нет такого файла или каталога\n", path_file);
+        printf("isacat: %s: Нет такого файла или каталога\n", path_file);
         return;
     }
 
