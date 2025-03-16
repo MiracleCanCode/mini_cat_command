@@ -3,7 +3,8 @@
 
 #define SUCCESSFULY_COPY_TEXT "Копирование завершено успешно!\n"
 #define ERROR_EXIST_INSERT_FILE "isacat: %s: Файла для вставки не существует\n"
-#define ERROR_EXIST_COPY_FILE "isacat: %s: Нет такого файла или каталога из которого вы хотите скопировать данные\n"
+#define ERROR_EXIST_COPY_FILE "isacat: %s: Нет такого файла или каталога "\
+"из которого вы хотите скопировать данные\n"
 
 const int MAX_COPY_BUFFER_SIZE = 1024;
 
