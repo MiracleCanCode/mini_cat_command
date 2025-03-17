@@ -1,7 +1,7 @@
 #include "commands.h"
 #include <stdio.h>
 
-const int MAX_BUFFER_SIZE = 1024;
+#define MAX_BUFFER_SIZE 1024
 
 void dump_file(char *path_file)
 {

@@ -1,12 +1,12 @@
 #include "commands.h"
 #include <stdio.h>
 
-#define SUCCESSFULY_COPY_TEXT "Копирование завершено успешно!\n"
+#define SUCCESSFULY_COPY_TEXT "Вставка завершена успешно!\n"
 #define ERROR_EXIST_INSERT_FILE "isacat: %s: Файла для вставки не существует\n"
 #define ERROR_EXIST_COPY_FILE "isacat: %s: Нет такого файла или каталога "\
 "из которого вы хотите скопировать данные\n"
 
-const int MAX_COPY_BUFFER_SIZE = 1024;
+#define MAX_COPY_BUFFER_SIZE 1024
 
 void insert_file_data(char *from, char *to)
 {
@@ -18,7 +18,7 @@ void insert_file_data(char *from, char *to)
         return;
     }
 
-    FILE *insert_file = fopen(to, "w");
+    FILE *insert_file = fopen(to, "r+");
 
     if(!insert_file)
     {

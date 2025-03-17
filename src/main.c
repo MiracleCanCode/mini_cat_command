@@ -1,8 +1,7 @@
 #include <string.h>
 #include <stdio.h>
 #include "commands.h"
-
-const int MAX_BUFFER_SIZE = 1024;
+#define MAX_BUFFER_SIZE 1024
 
 int main(int argc, char *argv[])
 {
@@ -67,8 +66,6 @@ int main(int argc, char *argv[])
                 return 1;
             }
         }
-        printf("isacat: Аргумент не найден: %s\nisacat: Для просмотра доступных аргументов запустите isacat с флагом --help\n", argv[i + 1]);
-        return 1;
     }
 
     return 0;
