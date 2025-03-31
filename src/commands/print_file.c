@@ -3,13 +3,13 @@
 
 #define MAX_BUFFER_SIZE 1024
 
-void dump_file(char *path_file)
+void print_file(const char* path_file)
 {
-    FILE *file = fopen(path_file, "r");
+    FILE* file = fopen(path_file, "r");
 
     if(!file) 
     {
-        printf("isacat: %s: Нет такого файла или каталога\n", path_file);
+        perror("isacat");
         return;
     }
 

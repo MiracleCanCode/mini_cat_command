@@ -3,13 +3,13 @@
 #include <string.h>
 #define MAX_BUFFER_SIZE 1024
 
-void search_text_in_file(char *file, char *text)
+void find_text_in_file(const char* file, const char* text)
 {
     FILE *inputFile = fopen(file, "r");
 
     if(!inputFile)
     {
-        printf("isacat: Такого файла не существует: %s\n", file);
+        perror("isacat:");
         return;
     }
 
@@ -21,9 +21,11 @@ void search_text_in_file(char *file, char *text)
         if(strstr(buffer, text))
         {
             printf("строка %d: %s", str_count, buffer);
+            fclose(inputFile);
             return;
         }
     }
-    printf("iscat: %s: Слово не найдено\n",text);
+
+    printf("isacat: %s: Слово не найдено\n",text);
     fclose(inputFile);
 }

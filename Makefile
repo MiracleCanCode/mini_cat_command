@@ -1,5 +1,5 @@
 BASE_DIR_COMMAND=./src/commands/
-FILES=./src/main.c ${BASE_DIR_COMMAND}search_text_in_file.c ${BASE_DIR_COMMAND}dump_file.c ${BASE_DIR_COMMAND}help.c ${BASE_DIR_COMMAND}insert_file_data.c
+FILES=./src/main.c ${BASE_DIR_COMMAND}find_text_in_file.c ${BASE_DIR_COMMAND}print_file.c ${BASE_DIR_COMMAND}print_help.c ${BASE_DIR_COMMAND}overwrite_file.c ${BASE_DIR_COMMAND}copy_file.c
 PATH_TO_COMPIL=./bin/isacat
 PATH_TO_LIB=./src/lib
 
