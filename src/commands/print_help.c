@@ -6,6 +6,7 @@
 #define REMARK_TEXT  "Использование: ./bin/isacat [ПАРАМЕТР] [ФАЙЛ]\n"\
 "Если комманда не задана, то читает стандартный ввод\n\n"
 #define SEARCH_COMMAND_TEXT " -s [ФАЙЛ] -w [СЛОВО] найти слово в файле\n"
+#define PRINT_INFO_FILE_TEXT " -info [ФАЙЛ] вывести информацию о файле"
 
 void print_help(void)
 {
@@ -13,4 +14,5 @@ void print_help(void)
    printf(COPY_FILE_DATA_TEXT);
    printf(READ_COMMAND_TEXT);
    printf(SEARCH_COMMAND_TEXT);
+   puts(PRINT_INFO_FILE_TEXT);
 }

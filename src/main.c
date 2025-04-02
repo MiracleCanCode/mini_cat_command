@@ -12,6 +12,12 @@ static int process_print_file(char** argv, const int argc, int i)
   print_file(path_file);
 }
 
+static int process_print_info_file(char** argv, const int argc, int i)
+{
+    const char* source_file = argv[i+1];
+    print_info_file(source_file);
+}
+
 static void  process_zero_args(char** argv, const int argc)
 {
     char buffer[MAX_BUFFER_SIZE];
@@ -70,11 +76,21 @@ int main(int argc, char** argv)
     for (int i = 1; i < argc; i++)
     {
         if (strcmp(argv[i], HELP_FLAG) == 0) 
+        {
             print_help();
+            return 0;
+        }
 
         if ((strcmp(argv[i], PRINT_FILE_FLAG) == 0) && i + 1 < argc)
         {
             if(process_print_file(argv, argc, i) == 0)
+                return 0;
+            return 1;
+        }
+
+        if ((strcmp(argv[i], PRINT_INFO_FILE_FLAG) == 0) && i + 1 < argc)
+        {
+            if(process_print_info_file(argv, argc, i) == 0)
                 return 0;
             return 1;
         }

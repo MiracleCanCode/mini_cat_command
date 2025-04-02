@@ -9,5 +9,6 @@
 #define HELP_FLAG "--help"
 #define FILE_FOR_FIND_TEXT_FLAG "-s"
 #define PRINT_FILE_FLAG "-r"
+#define PRINT_INFO_FILE_FLAG "-info"
 
 #endif
