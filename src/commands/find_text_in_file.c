@@ -9,7 +9,7 @@ void find_text_in_file(const char* file, const char* text)
 
     if(!inputFile)
     {
-        perror("isacat:");
+        perror("isacat: file not found: ");
         return;
     }
 

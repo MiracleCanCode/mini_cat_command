@@ -11,14 +11,14 @@ void overwrite_file(const char* from, const char* to)
 
     if (!copy_file) 
     {
-        perror("isacat:");
+        perror("isacat: copy file not found");
     }
 
     FILE* insert_file = fopen(to, "r+");
 
     if(!insert_file)
     {
-        perror("isacat:");
+        perror("isacat: insert file not found: ");
     }
 
     char copy_buffer[MAX_COPY_BUFFER_SIZE];

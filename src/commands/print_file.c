@@ -9,7 +9,7 @@ void print_file(const char* path_file)
 
     if(!file) 
     {
-        perror("isacat");
+        perror("isacat: print file not found: ");
         return;
     }
 
